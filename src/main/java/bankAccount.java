@@ -11,7 +11,7 @@ public class bankAccount {
     String sheikh;
     String welcomeMessage;
     double bal;
-    int years = 2 ;
+    int years = 2;
 
     Date currentDate = new Date();// current date
 
@@ -25,16 +25,22 @@ public class bankAccount {
         this.balance = balance;
 
 
-        }
-        //interest
-        void riseInterest (double years){
-        double interest = .69;
-        double interestBalance = (0.69 *balance)/ 100 ;
-        double newInterest = interestBalance - balance;
-            System.out.println("your balance interest will be" + interestBalance);
-        }
-        //hello
+    }
 
+    public bankAccount() {
+
+    }
+
+    //interest
+    void riseInterest(double years) {
+        double interest = .69;
+        double interestBalance = (0.69 * balance) / 100;
+        double newInterest = interestBalance - balance;
+        System.out.println("your balance interest will be" + interestBalance);
+    }
+    //hell0
+
+    //For testing deposit
 
 
     //deposit your money in £
@@ -86,7 +92,7 @@ public class bankAccount {
 
         String option = sc.nextLine();
 
-        if (option.equals("A")||option.equals("a")) {
+        if (option.equals("A") || option.equals("a")) {
             System.out.println("please enter a value to Deposit");
             double amount = sc.nextDouble();
             System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§");
@@ -102,7 +108,7 @@ public class bankAccount {
             double amount2 = sc.nextDouble();
             withdraw(amount2);
             System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§");
-            if (amount2 >  balance) {
+            if (amount2 > balance) {
                 System.out.println("You have went past your overdraft");
                 System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§");
 
@@ -110,19 +116,17 @@ public class bankAccount {
             }
         }
 
-        if (option.equals("C") || option.equals("c") ) {
+        if (option.equals("C") || option.equals("c")) {
             System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§");
             System.out.println("You have £" + balance);
             System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§");
             System.out.println();
         }
-        if (option.equals("D") || option.equals("d") ) {
+        if (option.equals("D") || option.equals("d")) {
             System.out.println("You now have to pay an interest so it will be deducted from your account");
             riseInterest(balance);
 
-        }
-
-        else if (option.equals("E")|| option.equals("E")) {
+        } else if (option.equals("E") || option.equals("E")) {
             System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§");
             System.out.println("Thank you for using this program");
             System.out.println("§§§§§§§§§§§§§§§§§§§§§§§§§§§");
@@ -132,9 +136,17 @@ public class bankAccount {
         //withdraw
 
     }
+    //testing Deposit
+
+    public Double Newdeposit(Double a, Double b) {
+        return a + b;
 
     }
 
+public Double Newwithdraw(Double a, Double b) {
+        return a - b;
+    //testing Deposit
+}}
 
 
 
